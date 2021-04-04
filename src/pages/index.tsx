@@ -13,7 +13,7 @@ const Index: React.FC<IndexProps> = ({ posts }) => {
     <React.Fragment>
       <Header />
 
-      <main className="min-h-screen">
+      <main className="min-h-3/4">
         <div className="container mx-auto flex flex-wrap py-6">
           <PostListSection posts={posts} />
         </div>

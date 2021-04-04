@@ -24,7 +24,7 @@ const PostListItem: React.FC<PostItemProps> = ({ id, title, category, publishedA
           <Link href={`/categories/${category.id}`}>
             <p className="text-blue-700 text-sm font-bold pb-4">{category.name}</p>
           </Link>
-          <a className="text-3xl font-bold hover:text-gray-700 pb-4">{title}</a>
+          <p className="text-3xl font-bold hover:text-gray-700 pb-4">{title}</p>
           <p className="text-sm pb-3">
             公開：{formatDate(publishedAt)}
             {publishedAt !== updatedAt && (

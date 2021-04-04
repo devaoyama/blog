@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React, { useCallback } from "react";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
@@ -17,10 +18,12 @@ const ShowPost: React.FC<ShowPostProps> = ({ post }) => {
     <React.Fragment>
       <Header />
 
-      <main className="container mx-auto md:w-2/3 min-h-screen">
+      <main className="container mx-auto w-full md:w-2/3 md:px-3 min-h-3/4">
         <article className="flex flex-col shadow my-4">
-          <div className="bg-white flex flex-col justify-start p-6">
-            <p className="text-blue-700 text-sm font-bold pb-4">カテゴリー</p>
+          <div className="bg-white flex flex-col justify-start p-3 md:p-6">
+            <Link href={`/categories/${post.category.id}`}>
+              <p className="text-blue-700 text-sm font-bold pb-4 cursor-pointer">{post.category.name}</p>
+            </Link>
             <h1 className="text-3xl font-bold hover:text-gray-700 pb-4">{post.title}</h1>
             <p className="text-sm pb-8">
               公開：{formatDate(post.publishedAt)}
@@ -31,6 +34,7 @@ const ShowPost: React.FC<ShowPostProps> = ({ post }) => {
               )}
             </p>
             <div
+              className="post"
               dangerouslySetInnerHTML={{
                 __html: `${post.body}`,
               }}

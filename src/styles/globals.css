@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+.post>h2 {
+  @apply text-2xl border-l-2 border-blue-600 p-3 bg-gray-50;
+}
+
+.post>h3 {
+  @apply text-xl border-l border-blue-200 pl-2;
+}
+
+.post>h4 {
+  @apply text-lg;
+}
+
+.post>p {
+  color: #333;
+}

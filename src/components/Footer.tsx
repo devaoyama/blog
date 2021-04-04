@@ -2,9 +2,9 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="w-full border-t bg-white pb-12">
-      <div className="w-full container mx-auto flex flex-col items-center">
-        <div className="uppercase pb-6">&copy; Keita Aoyama</div>
+    <footer className="w-full border-t bg-white p-6">
+      <div className="flex flex-col justify-center content-center">
+        <div className="uppercase text-center">&copy; <a href="https://twitter.com/IamK_prog" target="_blank">Keita Aoyama</a></div>
       </div>
     </footer>
   );

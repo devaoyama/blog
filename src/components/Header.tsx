@@ -14,13 +14,17 @@ const Header = () => {
         </div>
       </header>
 
-      {/* <nav className="w-full py-2 border-b">
+      <nav className="w-full py-2 border-b">
         <div className="w-full container mx-auto flex flex-col sm:flex-row items-center justify-center text-sm font-bold uppercase mt-0 px-6 py-2">
-          <a href="#" className="hover:bg-gray-400 rounded py-2 px-4 mx-2">About Me</a>
-          <a href="#" className="hover:bg-gray-400 rounded py-2 px-4 mx-2">Categories</a>
-          <a href="#" className="hover:bg-gray-400 rounded py-2 px-4 mx-2">Tags</a>
+          <Link href="/">
+            <p className="hover:bg-gray-200 rounded py-2 px-4 mx-2 cursor-pointer">Top</p>
+          </Link>
+          <Link href="/categories">
+            <p className="hover:bg-gray-200 rounded py-2 px-4 mx-2 cursor-pointer">Categories</p>
+          </Link>
+          <a href="https://twitter.com/IamK_prog" target="_blank" className="hover:bg-gray-200 rounded py-2 px-4 mx-2">About Me</a>
         </div>
-      </nav> */}
+      </nav>
     </React.Fragment>
   );
 };

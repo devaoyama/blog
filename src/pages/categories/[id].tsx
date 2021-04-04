@@ -1,6 +1,4 @@
 import React from "react";
-import Footer from "../../components/Footer";
-import Header from "../../components/Header";
 import PostListSection from "../../components/PostListSection";
 import { PostType } from "../../types/PostType";
 import { CategoryType } from '../../types/CategoryType';
@@ -12,18 +10,9 @@ type CategoryPorps = {
 
 const Category: React.FC<CategoryPorps> = ({ posts, category }) => {
   return (
-    <React.Fragment>
-      <Header />
-
-      <main className="min-h-3/4 px-3">
-        <div className="container mx-auto flex flex-wrap py-6">
-          <PostListSection posts={posts} />
-        </div>
-      </main>
-
-      <Footer />
-
-    </React.Fragment>
+    <div className="min-h-3/4 py-6">
+      <PostListSection posts={posts} />
+    </div>
   );
 };
 

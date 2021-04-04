@@ -10,29 +10,21 @@ type IndexProps = {
 
 const Index: React.FC<IndexProps> = ({ categories }) => {
   return (
-    <React.Fragment>
-      <Header />
+    <div className="min-h-3/4 mx-auto sm:w-1/2 pl-5">
+      <h2 className="text-3xl font-bold my-5">カテゴリー</h2>
 
-      <main className="min-h-3/4 px-3">
-        <div className="container mx-auto w-full md:w-1/2 pl-5">
-          <h2 className="text-3xl font-bold my-5">カテゴリー</h2>
-
-          <ul className="list-disc ml-8">
-            {categories.map(category => (
-              <li key={category.id} className="text-lg my-2">
-                <Link href={`/categories/${category.id}`}>
-                  <span className="text-blue-600 cursor-pointer">
-                    {category.name}
-                  </span>
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </main>
-
-      <Footer />
-    </React.Fragment>
+      <ul className="list-disc ml-8">
+        {categories.map(category => (
+          <li key={category.id} className="text-lg my-2">
+            <Link href={`/categories/${category.id}`}>
+              <span className="text-blue-600 cursor-pointer">
+                {category.name}
+              </span>
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 };
 

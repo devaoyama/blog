@@ -1,7 +1,5 @@
 import Link from "next/link";
 import React, { useCallback } from "react";
-import Footer from "../../components/Footer";
-import Header from "../../components/Header";
 import { PostType } from "../../types/PostType";
 
 type ShowPostProps = {
@@ -16,9 +14,7 @@ const ShowPost: React.FC<ShowPostProps> = ({ post }) => {
 
   return (
     <React.Fragment>
-      <Header />
-
-      <main className="container mx-auto w-full md:w-2/3 md:px-3 min-h-3/4">
+      <div className="min-h-3/4 mx-auto lg:w-5/6 xl:w-2/3 sm:px-3">
         <article className="flex flex-col shadow my-4">
           <div className="bg-white flex flex-col justify-start p-3 md:p-6">
             <Link href={`/categories/${post.category.id}`}>
@@ -41,9 +37,7 @@ const ShowPost: React.FC<ShowPostProps> = ({ post }) => {
             />
           </div>
         </article>
-      </main>
-
-      <Footer />
+      </div>
     </React.Fragment>
   );
 };

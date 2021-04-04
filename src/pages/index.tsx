@@ -1,6 +1,4 @@
 import React from "react";
-import Footer from "../components/Footer";
-import Header from "../components/Header";
 import PostListSection from "../components/PostListSection";
 import { PostType } from '../types/PostType';
 
@@ -10,18 +8,9 @@ type IndexProps = {
 
 const Index: React.FC<IndexProps> = ({ posts }) => {
   return (
-    <React.Fragment>
-      <Header />
-
-      <main className="min-h-3/4">
-        <div className="container mx-auto flex flex-wrap py-6">
-          <PostListSection posts={posts} />
-        </div>
-      </main>
-
-      <Footer />
-
-    </React.Fragment>
+    <div className="min-h-3/4 py-6">
+      <PostListSection posts={posts} />
+    </div>
   );
 };
 

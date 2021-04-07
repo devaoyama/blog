@@ -14,5 +14,6 @@
 }
 
 .post>p {
+  @apply pl-2;
   color: #333;
 }

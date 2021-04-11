@@ -1,4 +1,5 @@
 import React from "react";
+import Ogp from "../components/Ogp";
 import PostListSection from "../components/PostListSection";
 import { PostType } from '../types/PostType';
 
@@ -8,9 +9,12 @@ type IndexProps = {
 
 const Index: React.FC<IndexProps> = ({ posts }) => {
   return (
-    <div className="min-h-3/4 py-6">
-      <PostListSection posts={posts} />
-    </div>
+    <React.Fragment>
+      <Ogp type="blog" title="アイムケーのブログ" description="アイムケーのブログです。" />
+      <div className="min-h-3/4 py-6">
+        <PostListSection posts={posts} />
+      </div>
+    </React.Fragment>
   );
 };
 

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React, { useCallback } from "react";
+import Ogp from "../../components/Ogp";
 import { PostType } from "../../types/PostType";
 
 type ShowPostProps = {
@@ -14,6 +15,7 @@ const ShowPost: React.FC<ShowPostProps> = ({ post }) => {
 
   return (
     <React.Fragment>
+      <Ogp type="article" title={post.title} description={post.description} />
       <div className="min-h-3/4 mx-auto lg:w-5/6 xl:w-2/3 sm:px-3">
         <article className="flex flex-col shadow my-4">
           <div className="bg-white flex flex-col justify-start p-3 md:p-6">

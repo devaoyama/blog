@@ -10,7 +10,7 @@ type IndexProps = {
 const Index: React.FC<IndexProps> = ({ posts }) => {
   return (
     <React.Fragment>
-      <Ogp type="blog" title="アイムケーのブログ" description="アイムケーのブログです。" />
+      <Ogp type="website" title="アイムケーのブログ" description="アイムケーのブログです。" />
       <div className="min-h-3/4 py-6">
         <PostListSection posts={posts} />
       </div>

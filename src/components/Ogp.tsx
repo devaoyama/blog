@@ -3,7 +3,7 @@ import React from "react";
 
 type OgpProps = {
   url?: string
-  type: 'website' | 'blog' | 'article' | 'product'
+  type: 'website' | 'article'
   title?: string
   description?: string
 }

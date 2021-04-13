@@ -12,7 +12,7 @@ type CategoryPorps = {
 const Category: React.FC<CategoryPorps> = ({ posts, category }) => {
   return (
     <React.Fragment>
-      <Ogp type="blog" title={`カテゴリー：${category.name}`} description="アイムケーのブログです。" />
+      <Ogp type="article" title={`カテゴリー：${category.name}`} description="アイムケーのブログです。" />
       <div className="min-h-3/4 py-6">
         <h2 className="lg:w-2/3 mx-auto pl-3 text-xl">カテゴリー：{category.name}</h2>
         <PostListSection posts={posts} />

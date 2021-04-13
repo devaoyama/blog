@@ -10,7 +10,7 @@ type IndexProps = {
 const Index: React.FC<IndexProps> = ({ categories }) => {
   return (
     <React.Fragment>
-      <Ogp type="blog" title={`カテゴリー一覧`} description="アイムケーのブログです。" />
+      <Ogp type="article" title={`カテゴリー一覧`} description="アイムケーのブログです。" />
       <div className="min-h-3/4 mx-auto sm:w-1/2 pl-5">
         <h2 className="text-3xl font-bold my-5">カテゴリー</h2>
 

@@ -11,6 +11,8 @@ type OgpProps = {
 const Ogp: React.FC<OgpProps> = ({ url, type, title, description }) => {
   return (
     <Head>
+      <title>{title}{type === 'article' ? ' - アイムケーのブログ' : ''}</title>
+      <meta content={description} name="description" />
       <meta property="og:url" content={url} />
       <meta property="og:type" content={type} />
       <meta property="og:title" content={title} />

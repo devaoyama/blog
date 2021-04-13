@@ -8,11 +8,6 @@ type ShowPostProps = {
 };
 
 const ShowPost: React.FC<ShowPostProps> = ({ post }) => {
-  const formatDate = useCallback((strDate: string): string => {
-    const date = new Date(strDate);
-    return `${date.getFullYear()}/${(date.getMonth() + 1).toString().padStart(2, '0')}/${date.getDate().toString().padStart(2, '0')}`;
-  }, []);
-
   return (
     <React.Fragment>
       <Ogp type="article" title={post.title} description={post.description} />

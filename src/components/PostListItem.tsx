@@ -21,9 +21,11 @@ const PostListItem: React.FC<PostItemProps> = ({ id, title, category, publishedA
     <Link href={`/posts/${id}`}>
       <article className="w-full lg:w-4/6 flex flex-col shadow my-4 cursor-pointer">
         <div className="bg-white flex flex-col justify-start p-6 hover:bg-gray-100">
-          <Link href={`/categories/${category.id}`}>
-            <p className="text-blue-700 text-sm font-bold pb-4">{category.name}</p>
-          </Link>
+          <p className="text-blue-700 text-sm font-bold pb-4">
+            <Link href={`/categories/${category.id}`}>
+              {category.name}
+            </Link>
+          </p>
           <p className="text-3xl font-bold hover:text-gray-700 pb-4">{title}</p>
           <p className="text-sm pb-3">
             公開：{formatDate(publishedAt)}
